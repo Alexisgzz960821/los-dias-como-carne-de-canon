@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda — Los Días Como Carne de Cañón</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-mark">Los Días Como Carne de Cañón</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html" class="nav-link">00. Inicio</a>
+          <a href="nosotrxs.html" class="nav-link">01. Nosotrxs</a>
+          <a href="ejes.html" class="nav-link">02. Ejes</a>
+          <a href="archivo.html" class="nav-link">03. Archivo</a>
+          <a href="calendario.html" class="nav-link active">04. Agenda</a>
+          <a href="participa.html" class="nav-link">05. Participa</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">[ Programación pública // activaciones ]</span>
+          <h1 class="page-title">Agenda de trabajo y encuentros</h1>
+          <p class="header-copy">
+            Fechas de intervención en espacio público, sesiones de producción abierta en LABNL y
+            encuentros de diálogo colectivo.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block agenda-block">
+        <div class="container">
+          <div class="schedule-list" id="agenda-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Los Días Como Carne de Cañón</span>
+        <span>LABNL Monterrey</span>
+      </div>
+    </footer>
+
+    <script src="js/agenda-lista.js"></script>
+    <script src="js/agenda-loader.js"></script>
+  </body>
+</html>

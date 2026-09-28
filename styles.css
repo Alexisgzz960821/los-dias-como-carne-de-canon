@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participa — Los Días Como Carne de Cañón</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-mark">Los Días Como Carne de Cañón</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html" class="nav-link">00. Inicio</a>
+          <a href="nosotrxs.html" class="nav-link">01. Nosotrxs</a>
+          <a href="ejes.html" class="nav-link">02. Ejes</a>
+          <a href="archivo.html" class="nav-link">03. Archivo</a>
+          <a href="calendario.html" class="nav-link">04. Agenda</a>
+          <a href="participa.html" class="nav-link active">05. Participa</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">[ Convocatoria abierta // colaboración ]</span>
+          <h1 class="page-title">Suma tu voz y trabajo al equipo</h1>
+          <p class="header-copy">
+            Buscamos personas, colectivos y organizaciones interesadas en integrarse al proceso de
+            producción visual, mediación territorial e investigación del proyecto en LABNL.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container participacion-grid">
+          <article class="info-card">
+            <span class="card-index">[ 01 ]</span>
+            <h2>Únete al equipo productor</h2>
+            <p>
+              Si te interesa colaborar en jornadas de impresión gráfica, documentación fotográfica,
+              registro de archivo o activación de campo durante las salidas a calle.
+            </p>
+            <ul>
+              <li>Producción en taller abierto (LABNL)</li>
+              <li>Registro fotográfico y soporte gráfico</li>
+              <li>Mediación en activaciones públicas</li>
+            </ul>
+            <a href="https://forms.gle/ejemplo-registro-equipo" target="_blank" rel="noreferrer" class="btn btn-primary">[ Postular como integrante ]</a>
+          </article>
+
+          <article class="info-card">
+            <span class="card-index">[ 02 ]</span>
+            <h2>Alianzas y colectivos</h2>
+            <p>
+              Espacio abierto para sindicatos independientes, colectivas gráficas, proyectos de memoria
+              histórica y grupos culturales autogestivos.
+            </p>
+            <ul>
+              <li>Colaboración e intercambio de archivo</li>
+              <li>Coproducción de conversatorios</li>
+              <li>Puntos de acopio / buzón itinerante</li>
+            </ul>
+            <a href="mailto:contacto@losdiascomocarne.org" class="btn btn-secondary">[ Proponer una alianza ]</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="container location-box">
+          <span class="eyebrow">[ Sede de trabajo y producción ]</span>
+          <h3>LABNL Lab Cultural Ciudadano</h3>
+          <div class="location-grid">
+            <p><strong>Ubicación:</strong> Antiguo Palacio Federal (Zaragoza s/n, Zona Centro, Monterrey, N.L.)</p>
+            <p><strong>Sesiones abiertas:</strong> Revisa las fechas del taller y mesa de trabajo en <a href="calendario.html">Agenda</a>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Los Días Como Carne de Cañón</span>
+        <span>LABNL Monterrey</span>
+      </div>
+    </footer>
+  </body>
+</html>

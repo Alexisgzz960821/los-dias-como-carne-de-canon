@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archivo unificado — Los Días Como Carne de Cañón</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="film-grain" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-mark">Los Días Como Carne de Cañón</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="index.html" class="nav-link">00. Inicio</a>
+          <a href="nosotrxs.html" class="nav-link">01. Nosotrxs</a>
+          <a href="ejes.html" class="nav-link">02. Ejes</a>
+          <a href="archivo.html" class="nav-link active">03. Archivo</a>
+          <a href="calendario.html" class="nav-link">04. Agenda</a>
+          <a href="participa.html" class="nav-link">05. Participa</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-header compact-header">
+        <div class="container">
+          <span class="eyebrow">[ Acervo general // registro vivo ]</span>
+          <h1 class="page-title">Fichero unificado del proyecto</h1>
+
+          <div class="toolbar">
+            <a href="archivo.html" class="nav-chip">← Volver a categorías</a>
+            <div class="filter-group" id="gallery-filters">
+              <button class="filter-btn active" data-filter="all">[ 00. Todos ]</button>
+              <button class="filter-btn" data-filter="01-notas">[ 01. Notas del buzón ]</button>
+              <button class="filter-btn" data-filter="02-campo">[ 02. Registro en campo ]</button>
+              <button class="filter-btn" data-filter="03-cianotipia">[ 03. Cianotipia y piezas ]</button>
+              <button class="filter-btn" data-filter="04-audiovisual">[ 04. Audiovisual ]</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block gallery-block">
+        <div class="container">
+          <div class="gallery-grid" id="gallery-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+      <div class="modal-overlay" id="modal-overlay"></div>
+      <div class="modal-window">
+        <button class="modal-close-btn" id="modal-close" aria-label="Cerrar">×</button>
+        <button class="modal-nav-btn prev" id="modal-prev" aria-label="Anterior">←</button>
+        <button class="modal-nav-btn next" id="modal-next" aria-label="Siguiente">→</button>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>Los Días Como Carne de Cañón</span>
+        <span>LABNL Monterrey</span>
+      </div>
+    </footer>
+
+    <script src="js/galeria-lista.js"></script>
+    <script src="js/galeria-loader.js"></script>
+  </body>
+</html>
