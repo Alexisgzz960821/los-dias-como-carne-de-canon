@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Participa — Los Días Como Carne de Cañón</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
     <div class="film-grain" aria-hidden="true"></div>
@@ -24,7 +25,7 @@
     </header>
 
     <main>
-      <section class="page-header">
+      <section class="page-header reveal-on-scroll">
         <div class="container">
           <span class="eyebrow">[ Convocatoria abierta // colaboración ]</span>
           <h1 class="page-title">Suma tu voz y trabajo al equipo</h1>
@@ -35,9 +36,9 @@
         </div>
       </section>
 
-      <section class="section-block">
+      <section class="section-block reveal-on-scroll">
         <div class="container participacion-grid">
-          <article class="info-card">
+          <article class="info-card reveal-on-scroll reveal-delay-1">
             <span class="card-index">[ 01 ]</span>
             <h2>Únete al equipo productor</h2>
             <p>
@@ -52,7 +53,7 @@
             <a href="https://forms.gle/ejemplo-registro-equipo" target="_blank" rel="noreferrer" class="btn btn-primary">[ Postular como integrante ]</a>
           </article>
 
-          <article class="info-card">
+          <article class="info-card reveal-on-scroll reveal-delay-2">
             <span class="card-index">[ 02 ]</span>
             <h2>Alianzas y colectivos</h2>
             <p>
@@ -69,7 +70,7 @@
         </div>
       </section>
 
-      <section class="section-block">
+      <section class="section-block reveal-on-scroll">
         <div class="container location-box">
           <span class="eyebrow">[ Sede de trabajo y producción ]</span>
           <h3>LABNL Lab Cultural Ciudadano</h3>
