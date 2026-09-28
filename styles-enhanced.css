@@ -1,0 +1,290 @@
+/* ================================================================
+   SITE-CORE ENHANCED SYSTEM
+   Unified premium visual treatment layered over the existing site.
+   This file is intentionally additive and does not change the original content.
+   ================================================================ */
+
+:root {
+  --site-transition: 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  --site-shadow-soft: 0 24px 60px rgba(10, 10, 12, 0.10);
+  --site-shadow-strong: 0 26px 80px rgba(10, 10, 12, 0.18);
+  --site-glow: rgba(255, 255, 255, 0.28);
+  --site-overlay: rgba(10, 10, 12, 0.22);
+  --site-page-bg: #ededed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color var(--site-transition), color var(--site-transition);
+}
+
+body.site-ready {
+  opacity: 1;
+}
+
+body.page-exit {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* Shared reveal system */
+.reveal,
+.quote-editorial-container,
+.overview-grid,
+.exhibition-grid-compact,
+.team-artwork-item,
+.visual-category-card,
+.event-card,
+.timeline-item,
+.gallery-grid-item,
+.gallery-figure,
+.image-card,
+.info-panel,
+.feature-block {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), transform 700ms cubic-bezier(0.22, 1, 0.36, 1), filter 700ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible,
+.quote-editorial-container.is-visible,
+.overview-grid.is-visible,
+.exhibition-grid-compact.is-visible,
+.team-artwork-item.is-visible,
+.visual-category-card.is-visible,
+.event-card.is-visible,
+.timeline-item.is-visible,
+.gallery-grid-item.is-visible,
+.gallery-figure.is-visible,
+.image-card.is-visible,
+.info-panel.is-visible,
+.feature-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: none;
+}
+
+.reveal-delay-1 { transition-delay: 80ms; }
+.reveal-delay-2 { transition-delay: 160ms; }
+.reveal-delay-3 { transition-delay: 240ms; }
+.reveal-delay-4 { transition-delay: 320ms; }
+
+/* Premium header behavior */
+.header-museum {
+  transition: padding 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.header-museum.scrolled {
+  background: rgba(237, 237, 237, 0.78);
+  box-shadow: 0 10px 30px rgba(10, 10, 12, 0.04);
+  backdrop-filter: blur(18px) saturate(190%);
+  -webkit-backdrop-filter: blur(18px) saturate(190%);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 0.1rem;
+  transition: opacity var(--site-transition), transform var(--site-transition), color var(--site-transition);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 100%;
+  height: 1px;
+  background: rgba(10, 10, 12, 0.8);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--site-transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-1px);
+}
+
+/* Hero / artwork detail polish */
+.hero-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10,10,12,0.76), rgba(10,10,12,0.2) 48%, rgba(10,10,12,0.4));
+  z-index: 0;
+}
+
+.hero-background-img,
+.artwork-frame-compact img,
+.card-image-wrap img,
+.visual-category-card img,
+.gallery-figure img,
+.image-card img {
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), filter 700ms ease, opacity 700ms ease;
+  transform-origin: center;
+}
+
+.hero-atmosphere:hover .hero-background-img,
+.artwork-frame-compact:hover img,
+.card-image-wrap:hover img,
+.visual-category-card:hover img,
+.gallery-figure:hover img,
+.image-card:hover img {
+  transform: scale(1.03);
+  filter: saturate(0.96) contrast(1.04);
+}
+
+/* Editorial CTA buttons */
+.btn-editorial-link,
+.btn-archive,
+.btn-primary,
+.button-link,
+.btn-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(10, 10, 12, 0.18);
+  background: rgba(255,255,255,0.08);
+  color: var(--text-main);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.btn-editorial-link::before,
+.btn-archive::before,
+.btn-primary::before,
+.button-link::before,
+.btn-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.14) 50%, transparent 100%);
+  transform: translateX(-120%);
+  transition: transform 360ms ease;
+}
+
+.btn-editorial-link:hover,
+.btn-archive:hover,
+.btn-primary:hover,
+.button-link:hover,
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--site-shadow-soft);
+  border-color: rgba(10,10,12,0.26);
+}
+
+.btn-editorial-link:hover::before,
+.btn-archive:hover::before,
+.btn-primary:hover::before,
+.button-link:hover::before,
+.btn-link:hover::before {
+  transform: translateX(120%);
+}
+
+/* Cards + gallery visual depth */
+.visual-category-card,
+.event-card,
+.timeline-item,
+.gallery-grid-item,
+.image-card,
+.info-panel,
+.feature-block {
+  border: 1px solid rgba(10,10,12,0.08);
+  background: rgba(255,255,255,0.18);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.visual-category-card:hover,
+.event-card:hover,
+.timeline-item:hover,
+.gallery-grid-item:hover,
+.image-card:hover,
+.info-panel:hover,
+.feature-block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--site-shadow-soft);
+  border-color: rgba(10,10,12,0.16);
+}
+
+/* Photographic details */
+.artwork-frame-compact,
+.card-image-wrap,
+.gallery-figure,
+.image-card {
+  overflow: hidden;
+  background: rgba(10,10,12,0.04);
+}
+
+.artwork-meta,
+.card-overlay,
+.gallery-caption,
+.meta-stamp {
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.team-artwork-item:hover .artwork-meta,
+.visual-category-card:hover .card-overlay,
+.gallery-figure:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Layout resilience */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  isolation: isolate;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 768px) {
+  .header-museum {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .nav-museum {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .brand-title {
+    letter-spacing: 1.2px;
+  }
+}
